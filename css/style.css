@@ -1,0 +1,635 @@
+/*
+
+#33333
+#707070
+#E9D0E9
+#C3B9DE
+#3E4067
+#F68668
+
+
+
+*/
+/* Mobile First Design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+/* Section Utilities */
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+section {
+  padding: 3em;
+}
+
+h1,
+h2,
+.read-btn {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.6em;
+}
+
+.read-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background: url("../images/play-button.svg") no-repeat;
+  background-size: 15px;
+  background-position: 0 0.2em;
+  padding-left: 1.5em;
+  margin-top: 2em;
+  display: flex;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.primary {
+  padding: 1.2em 1.2em 1.2em calc(3em + 2px);
+  background: #333;
+  color: #fff;
+  background-position: 3em;
+  display: inline-block;
+  margin-top: 3em;
+  margin-left: -3em;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-header h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.page-header h3:after {
+  background: none repeat scroll 0 0 #3e4067;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 3px;
+  position: relative;
+  width: 100px;
+}
+
+/*********************
+NAVIGATION
+***********************/
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+}
+
+header a {
+  text-decoration: none;
+  color: #333;
+}
+
+header a.logo {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav ul li a {
+  padding: 1em;
+  transition: all 0.7s;
+}
+
+nav ul li a:hover {
+  color: #c3b9de;
+}
+
+/*********************
+HERO BANNER
+***********************/
+.box {
+  background: #ffff;
+  width: 400px;
+  margin: 0 auto;
+  opacity: 0.8;
+  padding: 2em 0.5em 2em 0.5em;
+  text-align: center;
+}
+
+.hero {
+  padding-top: 8em;
+  background: url("../images/purple-hero.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero p {
+  width: 100%;
+  padding-top: 0.5em;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/*********************
+SIDEBAR
+***********************/
+/* .sidebar-container {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+.sidebar,
+.subscribe {
+  font-size: 0.9rem;
+  line-height: 1.6em;
+  height: auto;
+}
+
+.sidebar {
+  background-color: #f7f7f7;
+}
+
+.subscribe input {
+  width: 100%;
+  padding: 1em;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: 1px solid #f7f7f7;
+}
+
+.subscribe input:focus {
+  outline: none !important;
+  border: 2px solid #c3b9de;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+  display: inline-block;
+  border: none;
+  padding: 1em;
+  width: 100%;
+  background: #c3b9de;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/*********************
+ABOUT PAGE
+***********************/
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.about-box {
+  margin-top: 2rem;
+  width: 400px;
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.about-title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.about-title span {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.title {
+  color: #f68668;
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  padding-left: 9rem;
+}
+
+.title:before {
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 8px;
+  height: 2px;
+  width: 130px;
+  background: #f68668;
+}
+
+/*********************
+PORTFOLIO PAGE
+***********************/
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem auto;
+  width: 347px;
+  border-radius: 0 7px 7px 7px;
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-image img {
+  border-radius: 7px 7px 0 0;
+  height: 100%;
+  width: 347px;
+}
+
+.product-info {
+  padding: 1.7rem;
+}
+
+.product-text {
+  height: 100%;
+  width: 307px;
+}
+
+.product-text h3 {
+  font-size: 1.5rem;
+  color: #474747;
+}
+
+.product-text h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #707070;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.product-text a {
+  color: #333;
+}
+
+.product-text a:hover {
+  color: #f68668;
+}
+
+.product-text .fab {
+  font-size: 20px;
+  margin-bottom: 0.7rem;
+}
+
+/*********************
+SKILLS SIDEBAR
+***********************/
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills-icon {
+  width: 60px;
+}
+/*********************
+FOOOTER
+***********************/
+.social-cta a {
+  color: #333;
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 2rem;
+}
+
+.social-cta a:hover {
+  color: #f68668;
+}
+
+.social-cta {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/**********************
+CONTACT PAGE
+************************/
+
+.contact p {
+  line-height: 1.8;
+}
+.contact p .social-link {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 400;
+  will-change: background;
+  transition: 150ms ease-out;
+}
+
+.contact p #social-linkedin {
+  background: #069;
+}
+
+.contact p #social-linkedin:hover,
+.contact p #social-instagram:hover,
+.contact p #social-tumblr:hover,
+.contact p #social-github:hover,
+.contact p #social-email:hover,
+.contact p #social-codepen:hover {
+  background: #f68668;
+}
+
+.contact p #social-instagram {
+  background: #cd486b;
+}
+
+.contact p #social-tumblr {
+  background: #3a5976;
+}
+
+.contact p #social-github,
+.contact p #social-email {
+  background: #3e4067;
+}
+
+.contact p #social-codepen {
+  background: #222;
+}
+
+.signup-form {
+  width: 250px;
+  background: #c3b9de;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.signup-form legend {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  line-height: 1.3;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.signup-form input[type="textarea"],
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 100%;
+  height: 38px;
+  background: #e6e6e6;
+  border-radius: 25px;
+  border: none;
+  padding: 0 20px 0 58px;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  height: 38px;
+  border-radius: 25px;
+  background: #3e4067;
+  cursor: pointer;
+  border: none;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 13px;
+  min-width: 40px;
+  text-align: center;
+}
+
+/**********************
+RESPONSIVE DESIGN-MEDIA QUERIES
+************************/
+@media only screen and (min-width: 768px) {
+  header {
+    background: none;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .box {
+    margin: 0 auto;
+    width: 500px;
+    padding: 1.5em;
+  }
+
+  .about-box {
+    width: 700px;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .title:before {
+    top: 15px;
+  }
+
+  .about-title span {
+    font-size: 3rem;
+  }
+
+  .product-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 700px;
+  }
+
+  .product-image img {
+    border-radius: 7px 0 0 7px;
+    height: 100%;
+    width: 350px;
+  }
+
+  .skills-icon {
+    width: 90px;
+  }
+
+  .social-cta a {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1020px) {
+  header {
+    background: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .wrapper {
+    grid-template-columns: 70% auto;
+    grid-template-rows: 60% auto;
+    grid-template-areas:
+      "hero sidebar"
+      "hero featured";
+    height: 100vh;
+  }
+
+  .main {
+    grid-area: hero;
+  }
+
+  .box {
+    width: 600px;
+  }
+
+  section {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+
+  nav ul li a {
+    color: #333;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background: #f7f7f7;
+    color: #333;
+  }
+
+  .subscribe {
+    grid-area: featured;
+    background: #3e4067;
+    color: #fff;
+  }
+
+  .page-header h3 {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .skills-icon {
+    margin-top: 2rem;
+  }
+
+  .social-cta {
+    justify-content: space-between;
+  }
+
+  /* FOOTER */
+  #footer {
+    background: #3e4067;
+  }
+
+  .social-cta a {
+    font-size: 40px;
+    color: #fff;
+  }
+
+  /* ABOUT PAGE */
+  .page-container {
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    width: 270px;
+    height: 270px;
+  }
+
+  /* PORTFOLIO PAGE */
+  .product-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* CONTACT FORM */
+  .signup-form {
+    width: 600px;
+  }
+}
